@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 12 21:28:12 2017
-
-@author: yy
-"""
 
 import os
 import sqlite3
@@ -16,9 +11,9 @@ app.config.update(dict(
         DATABASE=os.path.join(app.root_path, 'blog.db'),
         SECRET_KEY='development key',
         USERNAME='admin',
-        PASSWORD='admin'
+        PASSWORD='default'
         ))
-app.config.from_envvar('BLOG_SETTINGS', silent=True)
+#app.config.from_envvar('BLOG_SETTINGS', silent=True)
 
 def connect_db():
     """Connects to the specific database."""
